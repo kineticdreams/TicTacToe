@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  background: #ddd;
+  font-family: "Handlee", cursive;
+}
+
+#name {
+  font-family: "Permanent Marker", cursive;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate3d(-50%, -10%, 0);
+  text-align: center;
+  font-size: 5.5rem;
+  font-weight: 100;
+}
+
+h1 {
+  color: rgba(25, 53, 73, 0.9);
+}
+
+main,
+.square {
+  display: grid;
+}
+
+#options,
+#board,
+h1,
+span {
+  background: inherit;
+}
+
+main,
+.square {
+  background: #eee;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+#options,
+#display-message {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#options h1,
+#message h1 {
+  margin-top: 130px;
+  text-align: center;
+  background: transparent;
+}
+
+span {
+  display: inline-block;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  line-height: 66px;
+  border-radius: 50%;
+  background: rgba(25, 53, 73, 0.3);
+  margin: 25px;
+  width: 60px;
+  height: 60px;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+span:hover {
+  background: rgba(25, 53, 73, 0.5);
+  cursor: pointer;
+}
+span:active {
+  transform: scale(1.1);
+}
+
+#board {
+  display: none;
+  grid-template-columns: repeat(3, minmax(133px, auto));
+  grid-template-rows: repeat(3, minmax(133px, auto));
+  grid-gap: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  /* background: rgba(235, 221, 96, 0.507); */
+}
+
+.square {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #616161;
+  text-shadow: 0 1px 5px rgba(11, 11, 32, 0.8);
+  transition: 0.6s;
+}
+
+.square:hover {
+  cursor: pointer;
+  background: rgba(25, 53, 73, 0.1);
+}
+
+#message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  background: rgba(27, 187, 75, 0.575);
+  font-family: "Permanent Marker", cursive;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 0 22px -6px #777;
+  border-radius: 7px;
+}
+
+#message h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+button {
+  opacity: 0;
+  font-family: "Permanent Marker", sans-serif;
+  /* height: 70px;
+  width: 150px; */
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+  border: none;
+  padding: 15px;
+  border-radius: 7px;
+  background: linear-gradient(#eee, #bbb);
+  border: 1px solid hsla(0, 0%, 70%, 0.7);
+  box-shadow: 0 0 0 2px hsla(0, 0%, 80%, 0.9) inset,
+    0 0 0 4px hsla(0, 0%, 76%, 0.9) inset, 0px 0px 22px -3px rgba(0, 0, 0, 0.6);
+  font-weight: 900;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.shadow1 {
+  box-shadow: 0 0 44px -5px rgba(0, 0, 0, 0.3),
+    inset 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
